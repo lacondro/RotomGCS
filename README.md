@@ -1,4 +1,5 @@
 # ROTOM Ground Control Station
+![스크린샷_20221209_044939](https://user-images.githubusercontent.com/39759482/206651896-8e4d8637-db5a-47ae-b8cd-5b504422671b.png)
 
 *RotomGCS* is developed to increase usability of QGroundControl.
 
