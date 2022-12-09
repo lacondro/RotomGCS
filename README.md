@@ -2,16 +2,19 @@
 
 ## Download
 * Clone the repo (or your fork) including submodules:
+
 '''
 git clone --recursive -j8 https://github.com/lacondro/RotomGCS.git
 '''
 
 * Go to RotomGCS folder
+
 '''
 cd RotomGCS
 '''
 
 * Update submodules (required each time you pull new source code):
+
 '''
 git submodule update --recursive
 '''
