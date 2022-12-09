@@ -1,18 +1,26 @@
 # QGroundControl Ground Control Station
 
-Download
-1. Clone the repo (or your fork) including submodules:
+## Download
+* Clone the repo (or your fork) including submodules:
+'''
 git clone --recursive -j8 https://github.com/lacondro/RotomGCS.git
+'''
 
-2. Go to RotomGCS folder
+* Go to RotomGCS folder
+'''
 cd RotomGCS
+'''
 
-3. Update submodules (required each time you pull new source code):
+* Update submodules (required each time you pull new source code):
+'''
 git submodule update --recursive
+'''
 
 
-Upload
+## Upload
+'''
 git push -u origin main
+'''
 
 
 *QGroundControl* (QGC) is an intuitive and powerful ground control station (GCS) for UAVs.
