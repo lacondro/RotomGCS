@@ -7,7 +7,7 @@
 git clone --recursive -j8 https://github.com/lacondro/RotomGCS.git
 ```
 
-* Go to RotomGCS folder
+* Go to RotomGCS folder:
 
 ```
 cd RotomGCS
@@ -21,6 +21,18 @@ git submodule update --recursive
 
 
 ## Upload
+* add changed files:
+
+```
+git add .
+```
+* mark changed commit:
+
+```
+git commit -m "~~~"
+```
+* push:
+
 ```
 git push -u origin main
 ```
