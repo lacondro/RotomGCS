@@ -1,5 +1,19 @@
 # QGroundControl Ground Control Station
 
+Download
+1. Clone the repo (or your fork) including submodules:
+git clone --recursive -j8 https://github.com/lacondro/RotomGCS.git
+
+2. Go to RotomGCS folder
+cd RotomGCS
+
+3. Update submodules (required each time you pull new source code):
+git submodule update --recursive
+
+
+Upload
+git push -u origin main
+
 [![Releases](https://img.shields.io/github/release/mavlink/QGroundControl.svg)](https://github.com/mavlink/QGroundControl/releases)
 [![Travis Build Status](https://travis-ci.org/mavlink/qgroundcontrol.svg?branch=master)](https://travis-ci.org/mavlink/qgroundcontrol)
 [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/crxcm4qayejuvh6c/branch/master?svg=true)](https://ci.appveyor.com/project/mavlink/qgroundcontrol)
