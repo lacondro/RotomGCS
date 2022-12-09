@@ -17,8 +17,8 @@ import QGroundControl.FlightMap     1.0
 import QGroundControl.Palette       1.0
 
 Rectangle {
-    height: _outerRadius * 4
-    radius: _outerRadius
+    height: width*1.2
+    radius: height*0.05
     color:  QGroundControl.globalPalette.window
 
     property real _outerMargin: (width * 0.05) / 2
@@ -39,12 +39,12 @@ Rectangle {
         vehicle:                    globals.activeVehicle
     }
 
-    QGCCompassWidget {
-        id:                         compass
-        anchors.horizontalCenter:   parent.horizontalCenter
-        anchors.topMargin:          _outerMargin * 2
-        anchors.top:                attitude.bottom
-        size:                       _innerRadius * 2
-        vehicle:                    globals.activeVehicle
-    }
+//    QGCCompassWidget {
+//        id:                         compass
+//        anchors.horizontalCenter:   parent.horizontalCenter
+//        anchors.topMargin:          _outerMargin * 2
+//        anchors.top:                attitude.bottom
+//        size:                       _innerRadius * 2
+//        vehicle:                    globals.activeVehicle
+//    }
 }

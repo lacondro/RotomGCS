@@ -13,7 +13,6 @@
 #include "QGCMAVLink.h"
 
 class Vehicle;
-
 class VehicleBatteryFactGroup : public FactGroup
 {
     Q_OBJECT
