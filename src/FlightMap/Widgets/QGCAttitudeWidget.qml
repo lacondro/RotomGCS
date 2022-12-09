@@ -37,6 +37,7 @@ Item {
     property real _fontSize:        ScreenTools.defaultFontPointSize
     property var _activeVehicle: QGroundControl.multiVehicleManager.activeVehicle
 
+
     width:  size
     height: size*1.2
 
@@ -236,23 +237,26 @@ Item {
             anchors.right:       parent.right
             anchors.verticalCenter:     parent.verticalCenter
             anchors.rightMargin:         Math.round(ScreenTools.defaultFontPixelHeight*1)
-            text:                       _batteryVoltage2.toFixed(2) +"V "+_batteryCurrent2.toFixed(1)+"A " + _batteryPerc2+"%"
+            text:                       _batteryVoltage3 +"V "+_batteryCurrent3+"A " + _batteryPerc3+"%"
             color:                      "white"
             visible:                    true
             font.pointSize:             _fontSize*1.25
             font.bold:                  true
 
-            property var _batteryGroup: globals.activeVehicle && globals.activeVehicle.batteries.count ? globals.activeVehicle.batteries.get(0) :undefined
+            property var _batteryGroup: globals.activeVehicle && globals.activeVehicle.batteries.count ? globals.activeVehicle.batteries.get(0) : undefined
+
+
             property var _batteryPerc: _batteryGroup ? _batteryGroup.percentRemaining.value : "0"
-            property var _batteryPerc2: _batteryPerc ? _batteryPerc:_batteryPerc
-            property var _batteryVoltage: _batteryGroup ? _batteryGroup.voltage.value : "0"
-            property var _batteryVoltage2: _batteryVoltage ? _batteryVoltage: _batteryVoltage
-            property var _batteryCurrent: _batteryGroup ? _batteryGroup.current.value : "0"
-            property var _batteryCurrent2: _batteryCurrent ? _batteryCurrent: _batteryCurrent
+            property var _batteryPerc2: isNaN(_batteryPerc) ? "0":_batteryPerc
+            property var _batteryPerc3: _batteryPerc2? _batteryPerc2:_batteryPerc2
 
+            property var _batteryVoltage: _batteryGroup ? _batteryGroup.voltage.value.toFixed(2) : "0"
+            property var _batteryVoltage2: isNaN(_batteryVoltage) ? "0": _batteryVoltage
+            property var _batteryVoltage3: _batteryVoltage2 ? _batteryVoltage2: _batteryVoltage2
 
-//            property string _gsString: vehicle ? vehicle.groundSpeed.rawValue.toFixed(1) : "0"
-//            property string _gsString2: _gsString  ? _gsString+"m/s" : _gsString
+            property var _batteryCurrent: _batteryGroup ? _batteryGroup.current.value.toFixed(1) : "0"
+            property var _batteryCurrent2: isNaN(_batteryCurrent) ? "0": _batteryCurrent
+            property var _batteryCurrent3: _batteryCurrent2 ? _batteryCurrent2: _batteryCurrent2
 
         }
     }
